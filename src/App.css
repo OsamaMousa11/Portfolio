@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+/* Typography enhancements */
+/* Remove hard-coded colors; use theme variables */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fg);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.section-title {
+  color: var(--fg);
+  font-weight: 800;
+}
+
+b, strong {
+  color: var(--fg);
+  font-weight: 800;
+}
+
+.muted {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-inner a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.project-title {
+  color: var(--fg);
+  font-weight: 800;
+}
+
+/* Subtle scrollbar theme alignment */
+* {
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 999px;
+}
+:root[data-theme="light"] *::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Keep CRA defaults for logo demo (unused) */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
