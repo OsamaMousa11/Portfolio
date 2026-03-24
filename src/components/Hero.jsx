@@ -14,10 +14,7 @@ const Hero = ({ name, title, tagline, links }) => {
         <h1 className="hero-name">{name}</h1>
         <h2 className="hero-title">{title}</h2>
         {tagline && (
-          <p className="hero-tagline centered-quote">
-            <strong className="quote-strong">{tagline.split(',')[0]}</strong>,{` `}
-            <span className="quote-rest">{tagline.split(',').slice(1).join(',').trim()}</span>
-          </p>
+          <p className="hero-tagline">{tagline}</p>
         )}
 
         {(links?.github || links?.linkedin || links?.email || whatsappHref) && (
@@ -50,6 +47,16 @@ const Hero = ({ name, title, tagline, links }) => {
             )}
           </div>
         )}
+
+        <div className="hero-cv-wrap">
+          <a
+            className="hero-cv-btn"
+            href="/Osama_Mousa_CV.pdf"
+            download="Osama_Mousa_CV.pdf"
+          >
+            Download CV
+          </a>
+        </div>
       </div>
     </div>
   );

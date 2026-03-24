@@ -13,10 +13,24 @@ import Activities from "./components/Activities";
 import CompactSidebar from "./components/CompactSidebar";
 const resumeData = {
   name: "Osama Mousa",
-  title: ".NET Developer",
+  title: "Backend .NET Developer",
+  heroTagline:
+    "Passionate about building scalable, clean, and production-grade backend systems.",
   summary:
-    "Aspiring .NET Developer with a strong understanding of C#, ASP.NET Core, and software engineering principles. Seeking a challenging environment that enables continuous learning, contribution to real-world systems, and professional growth.",
-  experience: [],
+    "Backend .NET Developer specializing in C#, ASP.NET Core, and Clean Architecture.\n\nExperienced in designing and shipping scalable REST APIs, real-time systems with SignalR, AI-integrated services, and secure authentication pipelines. Passionate about writing clean, maintainable, production-grade code that solves real problems.",
+  experience: [
+    {
+      role: "Freelance Backend Developer",
+      company: "Freelance",
+      timeframe: "2026 – Present",
+      location: "Cairo, Egypt",
+      bullets: [
+        "Developing backend systems using ASP.NET Core",
+        "Designing RESTful APIs and database schemas",
+        "Applying Clean Architecture and best practices",
+      ],
+    },
+  ],
   projects: [
     {
       name: "Social Media App",
@@ -51,7 +65,10 @@ const resumeData = {
         "Follows Clean Architecture & Onion Architecture.",
         "Includes Generic Repository & Unit of Work.",
       ],
-      links: { github: "https://github.com/OsamaMousa11/solidhardware.store", live: null },
+      links: {
+        github: "https://github.com/OsamaMousa11/solidhardware.store",
+        live: "https://solidhardware.netlify.app/",
+      },
     },
     {
       name: "EduAI Question Generator",
@@ -62,7 +79,10 @@ const resumeData = {
         "Supports configurable difficulty and multilingual output.",
         "Implements Clean Architecture, DI, validation, and structured JSON generation.",
       ],
-      links: { github: "https://github.com/OsamaMousa11/EduAI.QuestionGenerator", live: null },
+      links: {
+        github: "https://github.com/OsamaMousa11/EduAI.QuestionGenerator",
+        live: "https://eduaiquestiongenerator.netlify.app/",
+      },
     },
     {
       name: "Employee Management System API",
@@ -76,7 +96,14 @@ const resumeData = {
       links: { github: "https://github.com/OsamaMousa11", live: null },
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: "Competitive Programming",
+      codeforcesIcon: true,
+      description:
+        "Solved 500+ algorithmic problems on Codeforces covering Dynamic Programming, Graph Theory, and Greedy Algorithms. Consistently ranked top 35% across rated contests, demonstrating strong problem-solving under pressure.",
+    },
+  ],
   contact: {
     phone: "https://wa.me/201025984672",
     email: "mailto:osamaomar1995@gmail.com",
@@ -265,7 +292,7 @@ function App() {
           <Hero
             name={resumeData.name}
             title={resumeData.title}
-            tagline="Born to suffer, forced to code"
+            tagline={resumeData.heroTagline}
             links={{
               github: resumeData.contact.github,
               linkedin: resumeData.contact.linkedin,
