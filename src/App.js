@@ -22,7 +22,7 @@ const resumeData = {
     {
       role: "Freelance Backend Developer",
       company: "Freelance",
-      timeframe: "2026 – Present",
+      timeframe: "2025– Present",
       location: "Cairo, Egypt",
       bullets: [
         "Developing backend systems using ASP.NET Core",
