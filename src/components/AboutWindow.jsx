@@ -11,10 +11,10 @@ const AboutWindow = ({ name, title, summary }) => {
       </div>
       <div className="window-content">
         <pre className="code-block">
-          <span className="comment">// About Me</span>{'\n'}
+          <span className="comment">{'// About Me'}</span>{'\n'}
           <span className="keyword">const</span> <span className="variable">name</span> <span className="operator">=</span> <span className="string">"{name}"</span>;{'\n'}
           <span className="keyword">const</span> <span className="variable">role</span> <span className="operator">=</span> <span className="string">"{title}"</span>;{'\n\n'}
-          <span className="comment">/* Summary */</span>{'\n'}
+          <span className="comment">{'/* Summary */'}</span>{'\n'}
           <span className="text">{summary}</span>
         </pre>
       </div>

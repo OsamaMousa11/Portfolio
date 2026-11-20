@@ -29,11 +29,10 @@ const ActivityItem = ({ title, org, timeframe, bullets, description, codeforcesI
         </h3>
         {meta ? <div className="muted">{meta}</div> : null}
       </div>
-      {description ? (
-        <p className="activity-description">{description}</p>
-      ) : (
+      {description && <p className="activity-description">{description}</p>}
+      {bullets && bullets.length > 0 && (
         <ul className="bullets">
-          {(bullets || []).map((b, i) => (
+          {bullets.map((b, i) => (
             <li key={i}>{b}</li>
           ))}
         </ul>

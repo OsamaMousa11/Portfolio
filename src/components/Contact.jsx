@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Contact = ({ contact }) => {
-  const { phone, email } = contact;
+  const { phone, displayPhone, email, location } = contact;
 
   const phoneDigits = (phone || '').match(/\d+/g)?.join('') || '';
   const whatsappUrl = phone && phone.includes('wa.me') ? phone : `https://wa.me/${phoneDigits}`;
@@ -17,7 +17,7 @@ const Contact = ({ contact }) => {
           </span>
           <div>
             <h3 style={{ margin: 0 }}>WhatsApp me</h3>
-            <div className="muted" style={{ marginTop: 4 }}>{phoneDigits}</div>
+            <div className="muted" style={{ marginTop: 4 }}>{displayPhone || phone}</div>
           </div>
         </div>
         <div className="project-links">
@@ -50,6 +50,23 @@ const Contact = ({ contact }) => {
           </a>
         </div>
       </div>
+
+      {/* Location */}
+      {location && (
+        <div className="contact-item">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span className="btn-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </span>
+            <div>
+              <h3 style={{ margin: 0 }}>Location</h3>
+              <div className="muted" style={{ marginTop: 4 }}>{location}</div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -57,7 +74,9 @@ const Contact = ({ contact }) => {
 Contact.propTypes = {
   contact: PropTypes.shape({
     phone: PropTypes.string.isRequired,
+    displayPhone: PropTypes.string,
     email: PropTypes.string.isRequired,
+    location: PropTypes.string,
   }).isRequired,
 };
 

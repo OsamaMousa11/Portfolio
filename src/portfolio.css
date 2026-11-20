@@ -180,9 +180,35 @@ a:hover { text-decoration: underline; text-decoration-color: var(--accent-3); }
 .bullets li { margin: 0.3rem 0; }
 
 /* Skills */
-.skills-grid { display: grid; gap: 1.25rem; }
+.skills-grid { display: grid; gap: 1.5rem; }
 .icon-cloud-card { padding: 0; background: transparent; border: none; }
-.icon-cloud-wrap { width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; }
+.icon-cloud-wrap { width: 100%; height: 380px; display: flex; align-items: center; justify-content: center; }
+
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+}
+
+.skill-category-card {
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.skill-category-title {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--heading);
+}
 
 /* Reusable chips */
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -385,7 +411,8 @@ a:hover { text-decoration: underline; text-decoration-color: var(--accent-3); }
 }
 :root[data-theme="light"] .experience-item,
 :root[data-theme="light"] .contact-item,
-:root[data-theme="light"] .project-card {
+:root[data-theme="light"] .project-card,
+:root[data-theme="light"] .skill-category-card {
   background: #ffffff;
 }
 :root[data-theme="light"] .window-header {
