@@ -45,7 +45,7 @@ const resumeData = {
       company: "Karakib App",
       timeframe: "2026",
       location: "Google Play",
-      link: "https://play.google.com/store/apps/details?id=com.almayar.karakib",
+      link: "https://play.google.com/store/apps/details?id=com.karekeep.mw",
       linkLabel: "Karakib on Google Play",
       bullets: [
         "Built the backend for Karakib, a mobile app that connects users who have recyclable or reusable waste with collection agents, enabling users to list items and request an on-demand pickup.",
